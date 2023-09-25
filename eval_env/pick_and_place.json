@@ -1,0 +1,316 @@
+{
+    "keys": ["ANY BLOCK", "ANY BOWL", "ANY CORNER", "ANY WHERE"],
+    "seen_0": {
+        "objects": ["blue block", "yellow block", "purple block", "red bowl","green bowl"],
+        "name": "put blue one on the red thing",
+        "gt": ["robot.pick_and_place(blue block, red bowl)"]
+    },
+    "seen_1": {
+        "objects": ["blue block", "purple bowl", "brown bowl","orange block"],
+        "name": "put the block colored like ocean on the purple thing",
+        "gt": ["robot.pick_and_place(blue block, purple bowl)"]
+    },
+    "seen_2":{ 
+        "objects": ["brown block", "yellow block", "gray bowl", "yellow bowl"],
+        "name": "put light colored block on the light colored bowl",
+        "gt": ["robot.pick_and_place(yellow block, yellow bowl)"]
+    },
+    "seen_3":{
+        "objects": ["cyan block", "red block", "gray block","pink bowl"],
+        "name": "put the block colored like an apple on the pink thing",
+        "gt": ["robot.pick_and_place(red block, pink bowl)"]
+    },
+    "seen_4":{
+        "objects": ["blue block", "yellow block", "purple block", "yellow bowl"],
+        "name": "stack all the blocks",
+        "gt": ["robot.pick_and_place(ANY BLOCK 1, ANY WHERE)",
+               "robot.pick_and_place(ANY BLOCK 2, ANY BLOCK 1)",
+                "robot.pick_and_place(ANY BLOCK 3, ANY BLOCK 2)"]
+    },
+    "seen_5":{
+        "objects": ["green block", "cyan block","pink block", "yellow bowl"],
+        "name": "stack all the blocks",
+        "gt": ["robot.pick_and_place(ANY BLOCK 1, ANY WHERE)",
+                "robot.pick_and_place(ANY BLOCK 2, ANY BLOCK 1)",
+                "robot.pick_and_place(ANY BLOCK 3, ANY BLOCK 2)"]
+    },
+    "seen_6":{
+        "objects": ["blue block", "yellow block", "green block","brown bowl"],
+        "name": "put all the blocks on top right corner",
+        "gt": ["robot.pick_and_place(ANY BLOCK 1, top right corner)",
+                "robot.pick_and_place(ANY BLOCK 2, top right corner)",
+                "robot.pick_and_place(ANY BLOCK 3, top right corner)"]
+    },
+    "seen_7":{
+        "objects": ["red block", "cyan block", "purple block","blue bowl"],
+        "name": "put all the blocks to the bottom left corner",
+        "gt": ["robot.pick_and_place(ANY BLOCK 1, bottom left corner)",
+                "robot.pick_and_place(ANY BLOCK 2, bottom left corner)",
+                "robot.pick_and_place(ANY BLOCK 3, bottom left corner)"]
+    },
+    "seen_8":{
+        "objects": ["blue block", "yellow block","red bowl","green bowl"],
+        "name": "put all the blocks in the red bowl",
+        "gt": ["robot.pick_and_place(ANY BLOCK 1, red bowl)",
+                "robot.pick_and_place(ANY BLOCK 2, red bowl)"]
+    },
+    "seen_9":{
+        "objects": ["red block", "cyan block","yellow bowl","blue bowl"],
+        "name": "put all the blocks in the light colored bowl",
+        "gt": ["robot.pick_and_place(ANY BLOCK 1, yellow bowl)",
+                "robot.pick_and_place(ANY BLOCK 2, yellow bowl)"]
+    },
+    "seen_10": {
+        "objects": ["blue block", "yellow block", "red bowl","green bowl"],
+        "name": "put yellow one on the red thing",
+        "gt": ["robot.pick_and_place(yellow block, red bowl)"]
+    },
+    "seen_11": {
+        "objects": ["green block", "orange block", "green bowl", "brown bowl"],
+        "name": "put the block colored like grass on the brown thing",
+        "gt": ["robot.pick_and_place(green block, brown bowl)"]
+    },
+    "seen_12":{ 
+        "objects": ["brown block", "yellow block", "blue bowl","yellow bowl"],
+        "name": "put dark colored block on the light colored bowl",
+        "gt": ["robot.pick_and_place(brown block, yellow bowl)"]
+    },
+    "seen_13":{
+        "objects": ["blue block", "purple block", "gray block","purple bowl"],
+        "name": "put the block colored like an sky on the purple thing",
+        "gt": ["robot.pick_and_place(blue block, purple bowl)"]
+    },
+    "seen_14":{
+        "objects": ["yellow block", "red block", "red bowl"],
+        "name": "stack all the blocks",
+        "gt": ["robot.pick_and_place(ANY BLOCK 1, ANY WHERE)",
+        "robot.pick_and_place(ANY BLOCK 2, ANY BLOCK 1)"]
+    },
+    "seen_15":{
+        "objects": ["green block", "orange block","pink block", "red bowl"],
+        "name": "stack all the blocks",
+        "gt": ["robot.pick_and_place(ANY BLOCK 1, ANY WHERE)",
+                "robot.pick_and_place(ANY BLOCK 2, ANY BLOCK 1)",
+                "robot.pick_and_place(ANY BLOCK 3, ANY BLOCK 2)"]
+    },
+    "seen_16":{
+        "objects": ["blue block", "yellow block", "green block","brown bowl"],
+        "name": "put all the blocks on bottom right corner",
+        "gt": ["robot.pick_and_place(ANY BLOCK 1, bottom right corner)",
+                "robot.pick_and_place(ANY BLOCK 2, bottom right corner)",
+                "robot.pick_and_place(ANY BLOCK 3, bottom right corner)"]
+    },
+    "seen_17":{
+        "objects": ["red block", "cyan block", "purple block","blue bowl"],
+        "name": "put all the blocks to the middle",
+        "gt": ["robot.pick_and_place(ANY BLOCK 1, middle)",
+                "robot.pick_and_place(ANY BLOCK 2, middle)",
+                "robot.pick_and_place(ANY BLOCK 3, middle)"]
+    },
+    "seen_18":{
+        "objects": ["blue block", "brown block","blue bowl","green bowl"],
+        "name": "put all the blocks in the blue bowl",
+        "gt": ["robot.pick_and_place(ANY BLOCK 1, blue bowl)",
+                "robot.pick_and_place(ANY BLOCK 2, blue bowl)"]
+    },
+    "seen_19":{
+        "objects": ["red block", "green block","red bowl","blue bowl"],
+        "name": "put all the blocks in the bowl colored like an apple",
+        "gt": ["robot.pick_and_place(ANY BLOCK 1, red bowl)",
+                "robot.pick_and_place(ANY BLOCK 2, red bowl)"]
+    },
+    "unseen_0": {
+        "objects": ["blue block", "yellow block", "purple block", "red block","green bowl"],
+        "name": "put all the blocks in different corners",
+        "gt": ["robot.pick_and_place(ANY BLOCK 1, ANY CORNER 1)",
+               "robot.pick_and_place(ANY BLOCK 2, ANY CORNER 2)",
+               "robot.pick_and_place(ANY BLOCK 3, ANY CORNER 3)",
+               "robot.pick_and_place(ANY BLOCK 4, ANY CORNER 4)"]
+    },
+    "unseen_1": {
+        "objects": ["blue block", "orange block", "green block","purple block" ,"brown bowl"],
+        "name": "put all the blocks in different corners",
+        "gt": ["robot.pick_and_place(ANY BLOCK 1, ANY CORNER 1)",
+               "robot.pick_and_place(ANY BLOCK 2, ANY CORNER 2)",
+               "robot.pick_and_place(ANY BLOCK 3, ANY CORNER 3)",
+               "robot.pick_and_place(ANY BLOCK 4, ANY CORNER 4)"]
+    },
+    "unseen_2":{ 
+        "objects": ["blue block", "yellow block", "blue bowl", "yellow bowl","gray bowl"],
+        "name": "put the blocks in their matching bowls",
+        "gt": "RULE_1"
+    },
+    "unseen_3":{
+        "objects": ["purple block", "red block", "blue block", "red bowl","blue bowl"],
+        "name": "put the blocks in their matching bowls",
+        "gt": "RULE_1"
+    },
+    "unseen_4":{ 
+        "objects": ["blue block", "yellow block", "blue bowl", "yellow bowl"],
+        "name": "put the blocks on mismatched bowls",
+        "gt": "RULE_2"
+    },
+    "unseen_5":{
+        "objects": ["yellow block", "red block", "green block", "red bowl","yellow bowl", "green bowl"],
+        "name": "put the blocks on mismatched bowls",
+        "gt": "RULE_2"
+    },
+    "unseen_6":{
+        "objects": ["blue block", "yellow block", "green block", "red bowl"],
+        "name": "stack all the blocks on the top right corner",
+        "gt": ["robot.pick_and_place(ANY BLOCK 1, top right corner)",
+                "robot.pick_and_place(ANY BLOCK 2, ANY BLOCK 1)",
+                "robot.pick_and_place(ANY BLOCK 3, ANY BLOCK 2)"]
+    },
+    "unseen_7":{
+        "objects": ["red block", "gray block", "cyan block", "blue bowl"],
+        "name": "stack all the blocks on the top left corner",
+        "gt": ["robot.pick_and_place(ANY BLOCK 1, top left corner)",
+                "robot.pick_and_place(ANY BLOCK 2, ANY BLOCK 1)",
+                "robot.pick_and_place(ANY BLOCK 3, ANY BLOCK 2)"]
+    },
+    "unseen_8":{
+        "objects": ["yellow block", "red block", "red bowl","blue bowl", "green bowl"],
+        "name": "put the blocks in their matching bowls",
+        "gt": "RULE_1"
+    },
+    "unseen_9":{
+        "objects": ["pink block", "blue block", "cyan bowl","blue bowl","yellow bowl"],
+        "name": "put the blocks on mismatched bowls",
+        "gt": "RULE_2"
+    },
+    "unseen_10": {
+        "objects": ["blue block", "purple block", "red block","gray block","green bowl"],
+        "name": "put all the blocks in different corners",
+        "gt": ["robot.pick_and_place(ANY BLOCK 1, top right corner)",
+               "robot.pick_and_place(ANY BLOCK 2, top left corner)",
+               "robot.pick_and_place(ANY BLOCK 3, bottom left corner)"]
+    },
+    "unseen_11": {
+        "objects": ["yellow block", "green block","brown block","blue block" ,"blue bowl"],
+        "name": "put all the blocks in different corners",
+        "gt": ["robot.pick_and_place(ANY BLOCK 1, ANY CORNER 1)",
+               "robot.pick_and_place(ANY BLOCK 2, ANY CORNER 2)",
+               "robot.pick_and_place(ANY BLOCK 3, ANY CORNER 3)",
+               "robot.pick_and_place(ANY BLOCK 4, ANY CORNER 4)"]
+    },
+    "unseen_12":{ 
+        "objects": ["blue block", "green block", "purple block", "green bowl","purple bowl"],
+        "name": "put the blocks in their matching bowls",
+        "gt": "RULE_1"
+    },
+    "unseen_13":{
+        "objects": ["yellow block", "purple block", "green block","blue block", "yellow bowl","blue bowl"],
+        "name": "put the blocks in their matching bowls",
+        "gt": "RULE_1"
+    },
+    "unseen_14":{ 
+        "objects": ["green block", "blue block", "blue bowl", "green bowl"],
+        "name": "put the blocks on mismatched bowls",
+        "gt": "RULE_2"
+    },
+    "unseen_15":{
+        "objects": ["yellow block", "brown block", "purple block", "brown bowl","yellow bowl", "green bowl"],
+        "name": "put the blocks on mismatched bowls",
+        "gt": "RULE_2"
+    },
+    "unseen_16":{
+        "objects": ["blue block", "yellow block", "green block", "red bowl"],
+        "name": "stack all the blocks on the bottom right corner",
+        "gt": ["robot.pick_and_place(ANY BLOCK 1, bottom right corner)",
+                "robot.pick_and_place(ANY BLOCK 2, ANY BLOCK 1)",
+                "robot.pick_and_place(ANY BLOCK 3, ANY BLOCK 2)"]
+    },
+    "unseen_17":{
+        "objects": ["red block", "gray block", "cyan block", "blue bowl"],
+        "name": "stack all the blocks on the bottom left corner",
+        "gt": ["robot.pick_and_place(ANY BLOCK 1, bottom left corner)",
+                "robot.pick_and_place(ANY BLOCK 2, ANY BLOCK 1)",
+                "robot.pick_and_place(ANY BLOCK 3, ANY BLOCK 2)"]
+    },
+    "unseen_18":{
+        "objects": ["gray block", "yellow block", "red bowl","yellow bowl", "gray bowl"],
+        "name": "put the blocks in their matching bowls",
+        "gt": "RULE_1"
+    },
+    "unseen_19":{
+        "objects": ["pink block", "cyan block", "cyan bowl","blue bowl","pink bowl"],
+        "name": "put the blocks on mismatched bowls",
+        "gt": "RULE_2"
+    },
+    "ambiguous_0": {
+        "objects": ["cyan block", "gray block", "pink block","pink bowl", "blue bowl"],
+        "name": "put the block that user wants in bowl colored like an ocean",
+        "gt": ["robot.pick_and_place(cyan block, blue bowl)"]
+    },
+    "ambiguous_1": {
+        "objects": ["blue block", "purple block", "red block","gray block","red bowl"],
+        "name": "put the block that user wants in red bowl ",
+        "gt": ["robot.pick_and_place(purple block, red bowl)"]
+    },
+    "ambiguous_2": {
+        "objects": ["blue block", "green block", "yellow block","red bowl", "blue bowl"],
+        "name": "put the block that user wants in blue bowl",
+        "gt": ["robot.pick_and_place(green block, blue bowl)"]
+    },
+    "ambiguous_3": {
+        "objects": ["blue block", "purple block", "red block","gray block","red bowl"],
+        "name": "put the block that user wants in red bowl",
+        "gt": ["robot.pick_and_place(blue block, red bowl)"]
+    },
+    "ambiguous_4": {
+        "objects": ["blue block", "green block", "yellow block","red bowl", "blue bowl"],
+        "name": "put the block that user wants in blue bowl",
+        "gt": ["robot.pick_and_place(yellow block, blue bowl)"]
+    },
+    "ambiguous_5": {
+        "objects": ["blue block", "purple block","red bowl", "yellow bowl","pink bowl"],
+        "name": "put a blue block in a bowl that user wants",
+        "gt": ["robot.pick_and_place(blue block, red bowl)"]
+    },
+    "ambiguous_6": {
+        "objects": ["blue block", "purple block","red bowl", "yellow bowl","pink bowl"],
+        "name": "put a blue block in a bowl that user wants",
+        "gt": ["robot.pick_and_place(blue block, pink bowl)"]
+    },
+    "ambiguous_7": {
+        "objects": ["yellow block", "gray block","red bowl", "blue bowl","green bowl"],
+        "name": "put a yellow block in a bowl that user wants",
+        "gt": ["robot.pick_and_place(yellow block, red bowl)"]
+    },
+    "ambiguous_8": {
+        "objects": ["yellow block", "gray block","red bowl", "blue bowl","green bowl"],
+        "name": "put a yellow block in a bowl that user wants",
+        "gt": ["robot.pick_and_place(yellow block, red bowl)"]
+    },
+    "ambiguous_9": {
+        "objects": ["green block", "pink block","pink bowl", "green bowl"],
+        "name": "put a block colored like a grass in a bowl that user wants",
+        "gt": ["robot.pick_and_place(green block, pink bowl)"]
+    },
+    "ambiguous_10": {
+        "objects": ["red block", "blue block", "pink block","pink bowl", "blue bowl"],
+        "name": "put the block in bowl colored like an ocean",
+        "gt": ["robot.pick_and_place(pink block, blue bowl)"]
+    },
+    "ambiguous_11": {
+        "objects": ["blue block", "green block","gray block","red bowl"],
+        "name": "put the block in bowl colored like an apple",
+        "gt": ["robot.pick_and_place(blue block, red bowl)"]
+    },
+    "ambiguous_12": {
+        "objects": ["blue block", "purple block","red bowl", "yellow bowl","blue bowl"],
+        "name": "put a purple block in the bowl",
+        "gt": ["robot.pick_and_place(purple block, red bowl)"]
+    },
+    "ambiguous_13": {
+        "objects": ["yellow block", "gray block","red block", "brown bowl","green bowl"],
+        "name": "put a red block in a bowl that represents a tree",
+        "gt": ["robot.pick_and_place(red block, brown bowl)"]
+    },
+    "ambiguous_14": {
+        "objects": ["green block", "pink block","brown bowl", "gray bowl","blue block"],
+        "name": "put a block colored like a tree in a bowl that looks dark",
+        "gt": ["robot.pick_and_place(green block, gray bowl)"]
+    }
+}
