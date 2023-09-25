@@ -72,7 +72,7 @@ def run_cliport(env,clip_model,coords, optim, obs, text, unct=None, maps=None):
   # Show video of environment rollout.
   # debug_clip = ImageSequenceClip(env.cache_video, fps=25)
   # display(debug_clip.ipython_display(autoplay=1, loop=1, center=False))
-  env.cache_video = []
+  # env.cache_video = []
 
   # Show camera image after pick and place.
   # plt.subplot(1, 2, 1)
