@@ -13,7 +13,7 @@ from clipport.run import run_cliport
 import clip
 from vild.forward import vild
 
-from eval.run import run_with_policy
+from llm.run import run_with_policy
 
 from env.env import PickPlaceEnv
 import numpy as np

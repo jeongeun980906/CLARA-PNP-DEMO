@@ -6,6 +6,18 @@ The project page is here [Project](https://clararobot.github.io/)
 The Demo code can be runed in
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jeongeun980906/CLARA-PNP-DEMO/blob/master/DEMO_colab.ipynb)
 
+## Acknowledgements
+
+This file includes a portion of code derived from:
+
+- **Author(s):** Google LLC
+- **Copyright:** 2022 Google LLC
+- **License:** [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0)
+- **Source Code:** https://github.com/google-research/google-research/blob/master/saycan/SayCan-Robot-Pick-Place.ipynb
+- **Modification Date:** 2023-10-03
+- **Description:** Extracted environment, vision, and language based policy part to adjust to our proejct. 
+
+## Run code
 ### 0. Run Vision (Optional)
 ```
 python collect_vision_only.py

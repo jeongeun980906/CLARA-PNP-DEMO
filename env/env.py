@@ -4,8 +4,17 @@ import pybullet_data
 import numpy as np
 from env.robot import Robotiq2F85
 
-#@markdown Global constants: pick and place objects, colors, workspace bounds
+'''
+This file includes code derived from [saycan] by Google LLC.
+Copyright 2022 Google LLC.
+SPDX-License-Identifier: Apache-2.0
 
+Licensed under the Apache License, Version 2.0.
+You may obtain a copy of the License at:
+http://www.apache.org/licenses/LICENSE-2.0
+
+Source Code: https://github.com/google-research/google-research/blob/master/saycan/SayCan-Robot-Pick-Place.ipynb
+'''
 PICK_TARGETS = {
   "blue block": None,
   "red block": None,
@@ -97,7 +106,7 @@ class PickPlaceEnv():
     pybullet.setAdditionalSearchPath(pybullet_data.getDataPath())
     pybullet.setTimeStep(self.dt)
 
-    self.home_joints = (np.pi / 2, -np.pi / 2, np.pi / 2, -np.pi / 2, 3 * np.pi / 2, 0)  # Joint angles: (J0, J1, J2, J3, J4, J5).
+    self.home_joints = (np.pi / 2, -np.pi / 2, np.pi / 2, -np.pi / 2, 3*np.pi / 2, 0)  # Joint angles: (J0, J1, J2, J3, J4, J5).
     self.home_ee_euler = (np.pi, 0, np.pi)  # (RX, RY, RZ) rotation in Euler angles.
     self.ee_link_id = 9  # Link ID of UR5 end effector.
     self.tip_link_id = 10  # Link ID of gripper finger tips.
@@ -380,7 +389,7 @@ class PickPlaceEnv():
     znear, zfar = (0.01, 10.)
     viewm = pybullet.computeViewMatrix(position, lookat, updir)
     fovh = (image_size[0] / 2) / focal_len
-    fovh = 180 * np.arctan(fovh) * 2 / np.pi
+    fovh = 180np.arctan(fovh)2 / np.pi
 
     # Notes: 1) FOV is vertical FOV 2) aspect must be float
     aspect_ratio = image_size[1] / image_size[0]
@@ -408,8 +417,8 @@ class PickPlaceEnv():
     # Get depth image.
     depth_image_size = (image_size[0], image_size[1])
     zbuffer = np.float32(depth).reshape(depth_image_size)
-    depth = (zfar + znear - (2 * zbuffer - 1) * (zfar - znear))
-    depth = (2 * znear * zfar) / depth
+    depth = (zfar + znear - (2zbuffer - 1)(zfar - znear))
+    depth = (2znearzfar) / depth
     if noise:
       depth += np.random.normal(0, 0.003, depth.shape)
 
@@ -439,7 +448,7 @@ class PickPlaceEnv():
     znear, zfar = (0.01, 10.)
     viewm = pybullet.computeViewMatrix(position, lookat, updir)
     fovh = (image_size[0] / 2) / focal_len
-    fovh = 180 * np.arctan(fovh) * 2 / np.pi
+    fovh = 180np.arctan(fovh)2 / np.pi
 
     # Notes: 1) FOV is vertical FOV 2) aspect must be float
     aspect_ratio = image_size[1] / image_size[0]
@@ -467,8 +476,8 @@ class PickPlaceEnv():
     # Get depth image.
     depth_image_size = (image_size[0], image_size[1])
     zbuffer = np.float32(depth).reshape(depth_image_size)
-    depth = (zfar + znear - (2 * zbuffer - 1) * (zfar - znear))
-    depth = (2 * znear * zfar) / depth
+    depth = (zfar + znear - (2zbuffer - 1)(zfar - znear))
+    depth = (2znearzfar) / depth
     if noise:
       depth += np.random.normal(0, 0.003, depth.shape)
 
@@ -487,8 +496,8 @@ class PickPlaceEnv():
     xlin = np.linspace(0, width - 1, width)
     ylin = np.linspace(0, height - 1, height)
     px, py = np.meshgrid(xlin, ylin)
-    px = (px - intrinsics[0, 2]) * (depth / intrinsics[0, 0])
-    py = (py - intrinsics[1, 2]) * (depth / intrinsics[1, 1])
+    px = (px - intrinsics[0, 2])(depth / intrinsics[0, 0])
+    py = (py - intrinsics[1, 2])(depth / intrinsics[1, 1])
     points = np.float32([px, py, depth]).transpose(1, 2, 0)
     return points
 
@@ -504,7 +513,7 @@ class PickPlaceEnv():
     homogen_points = np.pad(points.copy(), padding,
                             "constant", constant_values=1)
     for i in range(3):
-      points[Ellipsis, i] = np.sum(transform[i, :] * homogen_points, axis=-1)
+      points[Ellipsis, i] = np.sum(transform[i, :]homogen_points, axis=-1)
     return points
 
   def get_heightmap(self, points, colors, bounds, pixel_size):

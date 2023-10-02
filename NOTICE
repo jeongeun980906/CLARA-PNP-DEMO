@@ -1,0 +1,9 @@
+CLARA PNP DEMO
+Portions of this project are derived from Google LLC
+
+=== Google LLC Software ===
+Copyright 2022 Google LLC.
+SPDX-License-Identifier: Apache-2.0
+Licensed under the Apache License, Version 2.0. You may obtain a copy of the License at:
+https://www.apache.org/licenses/LICENSE-2.0
+Source Code: https://github.com/google-research/google-research/blob/master/saycan/SayCan-Robot-Pick-Place.ipynb

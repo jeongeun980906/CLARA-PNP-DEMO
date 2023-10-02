@@ -1,7 +1,17 @@
 import pybullet
 import threading, time
 import numpy as np
+'''
+This file includes code derived from [saycan] by Google LLC.
+Copyright 2022 Google LLC.
+SPDX-License-Identifier: Apache-2.0
 
+Licensed under the Apache License, Version 2.0.
+You may obtain a copy of the License at:
+http://www.apache.org/licenses/LICENSE-2.0
+
+Source Code: https://github.com/google-research/google-research/blob/master/saycan/SayCan-Robot-Pick-Place.ipynb
+'''
 class Robotiq2F85:
   """Gripper handling for Robotiq 2F85."""
 

@@ -1,3 +1,17 @@
+'''
+This file includes code derived from [saycan] by Google LLC.
+Copyright 2022 Google LLC.
+SPDX-License-Identifier: Apache-2.0
+
+Licensed under the Apache License, Version 2.0.
+You may obtain a copy of the License at:
+http://www.apache.org/licenses/LICENSE-2.0
+
+Source Code: https://github.com/google-research/google-research/blob/master/saycan/SayCan-Robot-Pick-Place.ipynb
+
+Modifications made on 2023-10-03:
+Extracted the run part of the original code.
+'''
 import numpy as np
 from llm.affordance import affordance_score2
 import matplotlib.pyplot as plt
@@ -51,3 +65,49 @@ def run(lm_planner,found_objects,max_tasks=5):
         else:
             break
     return steps_text, uncts
+
+
+def run_with_policy(env,steps_text,clip_model,coords,optim,obs, found_objects,
+                vild_model = None, image_path = None, task = None, gt = False):
+    # print('Initial state:')
+    # plt.imshow(env.get_camera_image())
+    # found_objects, boxes = vild_model.infer(image_path)
+    # category_name_string = ";".join(found_objects)
+    # vild_model.category_name_string = copy.deepcopy(category_name_string)
+    total_success = True
+    # _,_ = vild_model.infer(image_path)
+    for i, step in enumerate(steps_text):
+        if step == '' or step == 'done()':
+            break
+        nlp_step = step_to_nlp(step)
+        print('GPT-3 says next step:', nlp_step)
+        success = False
+        count = 0
+        aff = affordance_score2(step,found_objects)
+        if aff != 1 and task != 'ood':
+            total_success *= success
+            break
+        while not success:
+            obs = run_cliport(env,clip_model,coords, optim, obs, nlp_step)
+            if gt:
+                # try:
+                success = success_detector_gt(env,step,task)
+                # except:
+                #     success = False
+                count += 10
+            else:
+                save_img(env, image_path)
+                found_objects, boxes = vild_model.infer(image_path)
+                success = success_detector(found_objects,boxes,step)
+                count += 1
+            if count > 3:
+                break
+        total_success *= success
+        if total_success == 0:
+            break
+    # Show camera image after task.
+    # print('Final state:')
+    # plt.imshow(env.get_camera_image())
+    # final_image = env.get_camera_image()
+
+    return total_success

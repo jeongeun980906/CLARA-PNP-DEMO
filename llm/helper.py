@@ -1,6 +1,20 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from heapq import nlargest
+'''
+This file includes code derived from [saycan] by Google LLC.
+Copyright 2022 Google LLC.
+SPDX-License-Identifier: Apache-2.0
+
+Licensed under the Apache License, Version 2.0.
+You may obtain a copy of the License at:
+http://www.apache.org/licenses/LICENSE-2.0
+
+Source Code: https://github.com/google-research/google-research/blob/master/saycan/SayCan-Robot-Pick-Place.ipynb
+
+Modifications made on 2023-10-03:
+Extracted the nlp helper part of the original code.
+'''
 
 def build_scene_description(found_objects, block_name="box", bowl_name="circle"):
   scene_description = f"objects = {found_objects}"
